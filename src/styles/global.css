@@ -34,6 +34,9 @@ body {
 	font-family: "Atkinson", sans-serif;
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 	text-align: left;
 	background: linear-gradient(180deg, var(--gray-gradient)) no-repeat;
 	background-color: rgb(250, 241, 228);
@@ -49,6 +52,7 @@ main {
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
+	flex: 1 0 auto;
 }
 h1,
 h2,
