@@ -42,6 +42,15 @@ const posts = (await getCollection('blog')).sort(
 			ul li:first-child img {
 				width: 100%;
 			}
+			ul li img.using-mdx-image {
+				width: 70%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			ul li:first-child img.using-mdx-image {
+				width: 70%;
+			}
 			ul li:first-child .title {
 				font-size: 2.369rem;
 			}
@@ -94,7 +103,13 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+									<img
+										class:list={{ 'using-mdx-image': post.id === 'using-mdx' }}
+										width={720}
+										height={360}
+										src={post.data.heroImage}
+										alt=""
+									/>
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
