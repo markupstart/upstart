@@ -38,9 +38,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
-	background: linear-gradient(180deg, var(--gray-gradient)) no-repeat;
+	background: linear-gradient(180deg, rgba(251, 244, 232, 0.98) 0%, rgba(244, 232, 214, 0.92) 45%, rgb(250, 241, 228) 100%);
 	background-color: rgb(250, 241, 228);
-	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
