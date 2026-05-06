@@ -30,9 +30,17 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 	}
 	nav {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
 		align-items: center;
-		justify-content: space-between;
+	}
+	.internal-links {
+		display: flex;
+		justify-self: center;
+		gap: 0.25rem;
+	}
+	h2 {
+		justify-self: start;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -49,6 +57,14 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 	}
 	@media (max-width: 720px) {
+		nav {
+			grid-template-columns: 1fr;
+			justify-items: center;
+			row-gap: 0.25rem;
+		}
+		h2 {
+			justify-self: center;
+		}
 		.social-links {
 			display: none;
 		}
